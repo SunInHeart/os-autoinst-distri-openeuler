@@ -11,17 +11,14 @@ sub run {
     # wait for booting to appear
     assert_screen 'booting', 60;
 
-    # wait for black-screen to appear
-    assert_screen 'black-screen', 120;
+    # wait for the cli-desktop to appear
+    assert_screen 'cli-desktop', 120;
 
-    # wait for the xfce-desktop to appear
-    assert_screen 'xfce-desktop', 180;
-
+    type_string "root\n";
+    assert_screen 'cli-password-promote', 5;
     type_password;
-    
     send_key 'ret';
-
-    assert_screen 'desktop', 300;
+    assert_screen 'root-login', 10;
 
 }
 
