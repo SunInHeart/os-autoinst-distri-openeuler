@@ -1,0 +1,54 @@
+---
+products:
+  openeuler:
+    distri: "openeuler"
+    flavor: "dev"
+    arch: "riscv64"
+    version: "0"
+
+machines:
+  64bit-legacy:
+    backend: "qemu"
+    settings:
+      QEMU: riscv64
+      QEMUMACHINE: virt
+      QEMUCPUS: "4"
+      QEMURAM: "4096"
+      QEMU_NO_KVM: "1"
+      QEMUVGA: virtio
+      NICTYPE: user
+      HDDSIZEGB: "20"
+      QEMUCPU: rv64
+      VIRTIO_CONSOLE: "1"
+      OFFLINE_SUT: "0"
+      WORKER_CLASS: qemu_riscv64
+
+  64bit-uefi:
+    backend: "qemu"
+    settings:
+      QEMU: riscv64
+      QEMUMACHINE: virt
+      QEMUCPUS: "4"
+      QEMURAM: "4096"
+      QEMU_NO_KVM: "1"
+      QEMUVGA: virtio
+      # ------ For UEFI ---------
+      # UEFI_PFLASH: "1"
+      UEFI: '1'
+      # KEEPHDDS: "0"
+      # ------   End    ---------
+      NICTYPE: user
+      HDDSIZEGB: "20"
+      QEMUCPU: rv64
+      VIRTIO_CONSOLE: "1"
+      OFFLINE_SUT: "0"
+      WORKER_CLASS: qemu_riscv64
+
+job_templates:
+  legacy_boot:
+    product: "openeuler"
+    machine: "64bit-legacy"
+
+  uefi_boot:
+    product: "openeuler"
+    machine: "64bit-uefi"
