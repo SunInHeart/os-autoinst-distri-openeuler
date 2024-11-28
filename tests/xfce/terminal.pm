@@ -3,7 +3,7 @@ use testapi;
 
 sub run {
     assert_and_click 'terminal_icon';
-    assert_screen 'terminal_login';
+    assert_screen 'terminal_entered';
 
     type_string "cat /etc/os-release";
     send_key 'ret';
@@ -14,3 +14,5 @@ sub run {
     assert_screen 'kernal-info';
 
 }
+
+1;

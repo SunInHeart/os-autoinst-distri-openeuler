@@ -23,13 +23,15 @@ sub run {
     assert_script_run('echo "nameserver 8.8.8.8" > /etc/resolv.conf');
     assert_script_run('ping -c 5 www.google.com');
     
-    assert_script_run('dnf install -y git', 300);
+    # assert_script_run('dnf update -y', 660);
+    assert_script_run('dnf install -y git make', 600);
     assert_script_run('cd ~');
-    assert_script_run('git clone https://github.com/dylanaraps/neofetch.git', 300);
+    assert_script_run('git clone https://github.com/dylanaraps/neofetch.git', 120);
     assert_script_run('cd neofetch');
     assert_script_run('sudo make install');
-    assert_script_run('cp -a neofetch /usr/local/bin/')
+    assert_script_run('cp -a neofetch /usr/local/bin/');
     assert_script_run('neofetch');
 
 }
 
+1;

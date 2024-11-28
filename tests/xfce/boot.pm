@@ -21,7 +21,7 @@ sub run {
     
     send_key 'ret';
 
-    assert_screen 'desktop', 300;
+    assert_screen 'desktop', 120;
 
 }
 

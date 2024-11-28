@@ -1,0 +1,22 @@
+{
+  "area": [
+    {
+      "xpos": 6,
+      "ypos": 366,
+      "width": 162,
+      "height": 20,
+      "type": "match"
+    },
+    {
+      "xpos": 217,
+      "ypos": 501,
+      "width": 111,
+      "height": 18,
+      "type": "match"
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "os-info"
+  ]
+}
