@@ -1,6 +1,6 @@
 ---
 products:
-  openeuler:
+  openeuler-riscv64:
     distri: "openeuler"
     flavor: "dev"
     arch: "riscv64"
@@ -46,9 +46,9 @@ machines:
 
 job_templates:
   legacy_boot:
-    product: "openeuler"
+    product: "openeuler-riscv64"
     machine: "64bit-legacy"
 
   uefi_boot:
-    product: "openeuler"
+    product: "openeuler-riscv64"
     machine: "64bit-uefi"
