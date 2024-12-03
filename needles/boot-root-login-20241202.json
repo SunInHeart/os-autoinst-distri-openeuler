@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "type": "match",
+      "width": 217,
+      "height": 22,
+      "ypos": 333,
+      "xpos": 0
+    }
+  ],
+  "properties": [],
+  "tags": [
+    "root-login"
+  ]
+}
